@@ -1,25 +1,25 @@
 const express = require('express');
 const path = require('path');
-const mysql = require('mysql2'); // Importar mysql2
-const cors = require('cors'); // Para permitir solicitudes desde el frontend
+const mysql = require('mysql2'); 
+const cors = require('cors'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Configuración del pool de conexiones a MySQL
+
 const pool = mysql.createPool({
-  host: 'bhshspdxyi4h5y6fxkqq-mysql.services.clever-cloud.com', // Dirección del servidor de la base de datos
-  user: 'u7xvib8mn5adbg1o', // Usuario de la base de datos
-  password: 'yjuXtWY3KyzeJG1SkLOR', // Contraseña del usuario
-  database: 'bhshspdxyi4h5y6fxkqq', // Nombre de la base de datos
-  waitForConnections: true, // Esperar si no hay conexiones disponibles
-  connectionLimit: 10, // Número máximo de conexiones en el pool
-  queueLimit: 0 // Número máximo de solicitudes en cola (0 = sin límite)
+  host: 'bhshspdxyi4h5y6fxkqq-mysql.services.clever-cloud.com', 
+  user: 'u7xvib8mn5adbg1o', 
+  password: 'yjuXtWY3KyzeJG1SkLOR', 
+  database: 'bhshspdxyi4h5y6fxkqq', 
+  waitForConnections: true, 
+  connectionLimit: 10,
+  queueLimit: 0 
 });
 
-// Middleware
-app.use(cors()); // Permitir solicitudes desde el frontend
-app.use(express.json()); // Para parsear el cuerpo de las solicitudes JSON
+
+app.use(cors()); 
+app.use(express.json()); 
 
 // Servir archivos estáticos desde la carpeta "public"
 app.use(express.static(path.join(__dirname, 'public')));
