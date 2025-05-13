@@ -17,8 +17,8 @@ const pool = mysql.createPool({
   queueLimit: 0 
 });
 
-let username = "Yosva";
-let password = "1234"
+const username = "Yosva";
+const password = "1234";
 
 
 app.use(cors()); 
