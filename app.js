@@ -44,15 +44,15 @@ app.get('/productos', (req, res) => {
 
 
 app.post('/productos', (req, res) => {
-  const { nombre, precio, info, imagen, varcategoria } = req.body; 
+  const { nombre, precio, info, imagen, categoria } = req.body; 
 
-  if (!nombre  || !precio  || !info || !varcategoria ) {
+  if (!nombre  || !precio  || !info || !categoria ) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios.' });
   }
 
-  const query = 'INSERT INTO productos (nombre, precio, info, imagen, varcategoria) VALUES (?, ? , ? , ? , ?)'; 
+  const query = 'INSERT INTO productos (nombre, precio, info, imagen, categoria) VALUES (?, ? , ? , ? , ?)'; 
 
-  pool.query(query, [nombre, precio, info, imagen, varcategoria], (err, results) => {
+  pool.query(query, [nombre, precio, info, imagen, categoria], (err, results) => {
     if (err) {
       console.error('Error al agregar la los productos:', err.stack);
       return res.status(500).json({ error: 'Error en el servidor' });
