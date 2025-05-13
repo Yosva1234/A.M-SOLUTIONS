@@ -10,7 +10,22 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
+    position: relative;
 }
+
+.mi-boton {
+    position: absolute; /* Permite posicionar el botón en relación a su contenedor */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de la fuente */
+}
+
 
 nav {
     position: relative;

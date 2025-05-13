@@ -17,6 +17,9 @@ const pool = mysql.createPool({
   queueLimit: 0 
 });
 
+let username = "Yosva";
+let password = "1234"
+
 
 app.use(cors()); 
 app.use(express.json()); 
@@ -24,10 +27,18 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
+app.get('/password', (req, res) => {
+  res.json({ valor: password }); 
+});
+
+app.get('/username', (req, res) => {
+  res.json({ valor: username }); 
+});
 
 app.get('/productos', (req, res) => {
   const query = 'SELECT * FROM productos'; 
