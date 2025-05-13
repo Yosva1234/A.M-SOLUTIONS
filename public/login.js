@@ -1,8 +1,8 @@
 document.getElementById('login-form').addEventListener('submit', function (event) {
   event.preventDefault(); 
 
-  const usuarioCorrecto = getelement('username');
-  const contraseñaCorrecta = getelement('password');
+  const usuarioCorrecto = getelement('/username');
+  const contraseñaCorrecta = getelement('/password');
 
 
   const username = document.getElementById('username').value;
