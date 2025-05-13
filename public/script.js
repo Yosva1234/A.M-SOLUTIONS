@@ -46,7 +46,7 @@ function mostrar(productos) {
         <p class="descripcion">${element.info}</p>
       `;
   
-      document.getElementById(`${element.categoria}`).appendChild(scroll);
+      document.getElementById(element.categoria).appendChild(scrooll);
     });
   }
 
