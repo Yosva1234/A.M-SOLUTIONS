@@ -71,10 +71,12 @@ nav {
     border-radius: 5px;
 }
 
+/* Contenedor principal */
 .productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+    gap: 1rem; /* Espacio entre productos */
+    padding: 1rem;
 }
 
 .producto {
