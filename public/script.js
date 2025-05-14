@@ -46,7 +46,6 @@ function mostrar(productos) {
         <p class="descripcion">${element.info}</p>
       `;
   
-      alert(element.categoria);
       document.getElementById(element.categoria).appendChild(scrooll);
     });
   }
